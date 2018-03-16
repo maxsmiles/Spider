@@ -39,7 +39,7 @@ class Craw(object):
                 result_summary = [span.get_text() for span in s2]
                 # 输出
                 result_set = map(list, zip(result_title, result_summary, result_url))
-                csvFile = open('output.csv', 'w')
+                csvFile = open('output.csv', 'a')
                 writer = csv.writer(csvFile)
                 for data in result_set:
                     writer.writerow(data)
